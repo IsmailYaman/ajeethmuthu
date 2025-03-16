@@ -5,10 +5,12 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { aboutMe } from "../data/data"
+import Section from "./Section"
 
 export default function AboutMe() {
   return (
-    <section id="over-mij" className="relative flex min-h-screen w-full items-center justify-center bg-black px-4">
+    <Section>
+    <section id="over-mij" className="relative flex min-h-screen w-full items-center justify-center px-4">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
         {/* Left Content */}
         <div className="order-2 flex flex-col items-center text-center md:order-1 md:items-start md:text-left">
@@ -57,5 +59,6 @@ export default function AboutMe() {
         </div>
       </div>
     </section>
+    </Section>
   )
 }
