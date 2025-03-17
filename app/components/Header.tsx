@@ -15,7 +15,7 @@ interface NavItemProps {
 	item: NavLink;
 }
 
-export default function PillNavigation() {
+export default function NAvigation() {
 	const [isMobile, setIsMobile] = useState<boolean>(false);
 
 	useEffect(() => {
@@ -43,7 +43,7 @@ function DesktopNavigation() {
 	const midpoint = Math.ceil(navItems.length / 2);
 
 	return (
-		<nav className="flex items-center rounded-full bg-black/80 px-6 py-2 backdrop-blur-sm">
+		<nav className="flex items-center rounded-full bg-gray-700/80 px-6 py-2 backdrop-blur-sm">
 			<div className="flex items-center space-x-6">
 				{navItems.slice(0, midpoint).map((item) => (
 					<NavItem key={item.name} item={item} />

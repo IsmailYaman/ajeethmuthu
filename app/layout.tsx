@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import PillNavigation from "./components/Header";
+import Navigation from "./components/Header";
 
 
 const poppins = Poppins({
@@ -23,8 +23,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className={poppins.variable}>
-			<body className="font-poppins">
-				<PillNavigation />
+			<body className="font-poppins bg-white">
+				<Navigation />
 				{children}
 			</body>
 		</html>

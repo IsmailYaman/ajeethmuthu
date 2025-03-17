@@ -1,10 +1,10 @@
-import { AboutMeContent, ContactContent, ExperienceContent, ExpertiseContent, NavigationContent } from "../types/data";
+import { Intro, ContactContent, ExperienceContent, ExpertiseContent, NavigationContent, About } from "../types/data";
 
 
-export const aboutMe: AboutMeContent = {
+export const intro: Intro = {
     greeting: "Hi, Ajeeth hier",
     introduction: "Ik ben een",
-    profession: "Data Scientist",
+    profession: ["Data Scientist", "Data Steward", "Business Analist", "Informatie Analist"],
     description: "Met passie voor machine learning en AI, transformeer ik complexe data in waardevolle inzichten. Mijn expertise ligt in het ontwikkelen van modellen die bedrijven helpen datagedreven beslissingen te nemen en innovatieve oplossingen te creëren.",
     socialLinks: [
       {
@@ -19,7 +19,27 @@ export const aboutMe: AboutMeContent = {
       }
     ]
   };
-  
+  export const about: About[] = [
+    {
+        title: "Ik ben een echte zoetekauw",
+        description: "Ik ben een Data Scientist met een passie voor machine learning en AI. Mijn expertise ligt in het ontwikkelen van modellen die bedrijven helpen datagedreven beslissingen te nemen en innovatieve oplossingen te creëren.",
+        image: "/images/ajeeth.jpg"
+    },
+    {
+        title: "Ik ben een plasmadonor",
+        description: "Ik ben een Data Scientist met een passie voor machine learning en AI. Mijn expertise ligt in het ontwikkelen van modellen die bedrijven helpen datagedreven beslissingen te nemen en innovatieve oplossingen te creëren.",
+        image: "/images/ajeeth.jpg"
+    },
+    {
+        title: "Ik hou van reizen",
+        description: "Ik ben een Data Scientist met een passie voor machine learning en AI. Mijn expertise ligt in het ontwikkelen van modellen die bedrijven helpen datagedreven beslissingen te nemen en innovatieve oplossingen te creëren.",
+        image: "/images/ajeeth.jpg"
+    },
+
+
+];
+
+
   export const navigation: NavigationContent = {
     logo: {
       text: "Ajeeth",
