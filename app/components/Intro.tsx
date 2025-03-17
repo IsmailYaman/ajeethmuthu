@@ -22,8 +22,8 @@ export default function Intro() {
 
   return (
     <Section>
-      <section id="over-mij" className="relative flex min-h-screen w-full items-center justify-center px-4">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
+      <section id="over-mij" className="relative flex min-h-screen w-full items-center justify-center">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
           {/* Left Content */}
           <div className="order-2 flex flex-col items-center text-center md:order-1 md:items-start md:text-left">
             <h1 className="mb-4 text-5xl font-bold text-slate-700 md:text-6xl">
