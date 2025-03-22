@@ -17,7 +17,6 @@ const About: React.FC = () => {
 				{about.map((item, i) => {
 					const targetScale = 1 - (about.length - i) * 0.05;
 					return (
-                        //show a h1 title on top of only the first card.
 						<AboutCard
 							key={item.title}
 							item={item}

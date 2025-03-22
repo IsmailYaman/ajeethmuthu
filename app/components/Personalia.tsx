@@ -22,7 +22,7 @@ export default function Personalia
   }, [])
 
   return (
-    <Section>
+    <Section amount={0.5}>
       <section id="over-mij" className="relative flex min-h-screen w-full items-center justify-center">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
           {/* Left Content */}
@@ -76,8 +76,8 @@ export default function Personalia
           </div>
 
           {/* Right Content - Image */}
-          <div className="order-1 flex justify-center md:order-2">
-            <div className="relative h-[300px] w-[300px] rounded-full overflow-hidden md:h-[500px] md:w-[500px]">
+          <div className="order-1 flex justify-center md:justify-end md:order-2">
+            <div className="relative h-[300px] w-[300px] rounded-full shadow-lg overflow-hidden md:h-[600px] md:w-[600px]">
               <Image
                 src="/img/ajeeth.jpg"
                 alt="Ajeeth Muthu"

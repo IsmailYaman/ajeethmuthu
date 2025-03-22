@@ -26,7 +26,7 @@ export default function Navigation() {
 
     const handleScroll = (): void => {
       // Show navigation when scrolled past 100vh
-      setShowNav(window.scrollY > window.innerHeight);
+      setShowNav(window.scrollY > window.innerHeight-200);
     };
 
     checkScreenSize();

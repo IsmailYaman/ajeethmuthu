@@ -1,54 +1,114 @@
 "use client";
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
-import { experience } from "../data/data";
-import { ExperienceContent } from "../types/data"; // Import your existing interface
-import Section from "./Section";
-
-const Experience = () => {
-	return <HorizontalScrollCarousel />;
-};
-
-const HorizontalScrollCarousel = () => {
-	const targetRef = useRef<HTMLDivElement | null>(null);
-	const { scrollYProgress } = useScroll({
-		target: targetRef,
-	});
-
-	const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
-
+export default function index() {
 	return (
-		<section ref={targetRef} className="relative h-[400vh]">
-			<div className="sticky top-0 flex h-screen items-center overflow-hidden">
-				<h1 className="absolute top-40 left-10 text-4xl font-bold text-stone-950 z-10">Mijn Ervaring</h1>
-				<motion.div style={{ x }} className="flex gap-8 pl-8">
-					{experience.items.map((item, index) => {
-						return <ExperienceCard item={item} key={index} />;
-					})}
-				</motion.div>
+		<main className="bg-black">
+			<div className="wrapper">
+				<section className="text-white  h-screen  w-full bg-slate-950  grid place-content-center sticky top-0">
+					<h1 className="2xl:text-7xl text-6xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+						I Know What Exactly you're <br /> Looking For! Scroll Please 👇
+					</h1>
+				</section>
+
+				<section className="bg-gray-300 text-black grid place-content-center h-screen sticky top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden">
+					<h1 className="2xl:text-7xl text-4xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+						If you don't like this Smooth Scroll then I'm sorry, <br /> create your own and make it open
+						source 💼
+					</h1>
+				</section>
+				<section className="text-white  h-screen  w-full bg-slate-950  grid place-content-center sticky top-0">
+					<h1 className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+						Don't Forget To Share <br /> This Sticky CSS Tricks.😎
+					</h1>
+				</section>
 			</div>
-		</section>
-	);
-};
 
-const ExperienceCard = ({ item }: { item: ExperienceContent["items"][0] }) => {
-	return (
-		<Section>
-			<div className="group relative h-[500px] w-[450px] overflow-hidden bg-stone-950/80 rounded-xl shadow-xl">
-				<div className="absolute inset-0 z-10 p-8 flex flex-col">
-					<div className="mb-2">
-						<span className="text-white/70 text-xl">{item.year}</span>
+			<section className="text-white   w-full bg-slate-950  ">
+				<div className="grid grid-cols-2">
+					<div className="sticky top-0 h-screen flex items-center justify-center">
+						<h1 className="2xl:text-7xl text-5xl px-8 font-semibold text-center tracking-tight leading-[120%]">
+							Thanks To Scroll.
+							<br /> Now Scroll Up Again☝️🏿
+						</h1>
 					</div>
-					<h3 className="text-3xl font-bold text-white mb-2">{item.title}</h3>
-					<h4 className="text-xl text-white/90 font-medium mb-4">{item.company}</h4>
-
-					<div className="flex-grow overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
-						<p className="text-white/80 leading-relaxed">{item.description}</p>
+					<div className="grid gap-2">
+						<figure className="grid place-content-center -skew-x-12">
+							<img
+								src="https://images.unsplash.com/photo-1718838541476-d04e71caa347?w=500&auto=format&fit=crop"
+								alt=""
+								className="transition-all duration-300 w-80 h-96  align-bottom object-cover "
+							/>
+						</figure>
+						<figure className="grid place-content-center skew-x-12">
+							<img
+								src="https://images.unsplash.com/photo-1715432362539-6ab2ab480db2?w=500&auto=format&fit=crop"
+								alt=""
+								className="transition-all duration-300 w-80 h-96  align-bottom object-cover "
+							/>
+						</figure>
+						<figure className="grid place-content-center -skew-x-12">
+							<img
+								src="https://images.unsplash.com/photo-1718601980986-0ce75101d52d?w=500&auto=format&fit=crop"
+								alt=""
+								className="transition-all duration-300 w-80 h-96  align-bottom object-cover "
+							/>
+						</figure>
+						<figure className="grid place-content-center skew-x-12">
+							<img
+								src="https://images.unsplash.com/photo-1685904042960-66242a0ac352?w=500&auto=format&fit=crop"
+								alt=""
+								className="transition-all duration-300 w-80 h-96  align-bottom object-cover "
+							/>
+						</figure>
 					</div>
 				</div>
-			</div>
-		</Section>
+			</section>
+			<section className="text-white   w-full bg-slate-950  ">
+				<div className="grid grid-cols-2 px-8">
+					<div className="grid gap-2">
+						<figure className="sticky top-0 h-screen grid place-content-center">
+							<img
+								src="https://images.unsplash.com/photo-1718183120769-ece47f31045b?w=500&auto=format&fit=crop"
+								alt=""
+								className="transition-all duration-300 w-96 h-96  align-bottom object-cover rounded-md"
+							/>
+						</figure>
+						<figure className="sticky top-0 h-screen grid place-content-center">
+							<img
+								src="https://images.unsplash.com/photo-1715432362539-6ab2ab480db2?w=500&auto=format&fit=crop"
+								alt=""
+								className="transition-all duration-300  w-96 h-96   align-bottom object-cover rounded-md"
+							/>
+						</figure>
+						<figure className="sticky top-0 h-screen grid place-content-center">
+							<img
+								src="https://images.unsplash.com/photo-1685904042960-66242a0ac352?w=500&auto=format&fit=crop"
+								alt=""
+								className="transition-all duration-300 w-96 h-96   align-bottom object-cover rounded-md"
+							/>
+						</figure>
+						<figure className="sticky top-0 h-screen grid place-content-center">
+							<img
+								src="https://images.unsplash.com/photo-1718838541476-d04e71caa347?w=500&auto=format&fit=crop"
+								alt=""
+								className="transition-all duration-300  w-96 h-96   align-bottom object-cover rounded-md"
+							/>
+						</figure>
+					</div>
+					<div className="sticky top-0 h-screen grid place-content-center">
+						<h1 className="text-4xl px-8 font-medium text-right tracking-tight leading-[120%]">
+							Copied & Paste Every Component you want and make an creative website 😎
+						</h1>
+					</div>
+				</div>
+			</section>
+			<footer className="group bg-slate-950 ">
+				<h1 className="text-[16vw] group-hover:translate-y-4 translate-y-20 leading-[100%] uppercase font-semibold text-center bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent transition-all ease-linear">
+					ui-layout
+				</h1>
+				<section className="bg-black h-40 relative z-10 grid place-content-center text-2xl rounded-tr-full rounded-tl-full">
+					Thanks for Scrolling
+				</section>
+			</footer>
+		</main>
 	);
-};
-
-export default Experience;
+}
