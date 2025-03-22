@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, ReactNode } from "react";
-import { motion, useInView, Variant } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 type AnimationType = "slideLeft" | "slideRight" | "fadeIn" | "scaleUp" | "slideUp" | "rotate" | "none";
 
