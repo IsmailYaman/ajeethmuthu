@@ -9,6 +9,7 @@ interface AboutCardProps {
   progress: any;
   range: number[];
   targetScale: number;
+  
 }
 
 const AboutCard: React.FC<AboutCardProps> = ({ item, i, progress, range, targetScale }) => {
@@ -41,7 +42,7 @@ const AboutCard: React.FC<AboutCardProps> = ({ item, i, progress, range, targetS
           w-full max-w-7xl
           h-[700px] sm:h-[500px] 
           rounded-3xl p-6 sm:p-8 md:p-12 
-          bg-gray-700/80
+          bg-stone-950/80
           shadow-xl backdrop-blur-sm
           origin-top
           transition-colors duration-300

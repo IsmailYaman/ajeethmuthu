@@ -33,7 +33,12 @@ export interface NavigationContent {
 }
 
 export interface ExperienceContent {
-	// Define experience structure when needed
+	items: {
+		title: string;
+		company: string;
+		description: string;
+		year: string;
+	}[];
 }
 
 export interface ExpertiseContent {
