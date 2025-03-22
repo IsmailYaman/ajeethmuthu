@@ -17,6 +17,18 @@ export interface About {
 	image: string;
 }
 
+export interface AboutProps {
+  data: About;
+  imageFirst?: boolean;
+  backgroundColor?: string;
+  containerClassName?: string;
+  textContainerClassName?: string;
+  imageContainerClassName?: string;
+  titleClassName?: string;
+  descriptionClassName?: string;
+  imageClassName?: string;
+}
+
 export interface LogoContent {
 	text: string;
 	highlight: string;
@@ -41,6 +53,19 @@ export interface ExperienceContent {
 	}[];
 }
 
+export interface AboutProps {
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  imageFirst?: boolean;
+  containerClassName?: string;
+  textContainerClassName?: string;
+  imageContainerClassName?: string;
+  titleClassName?: string;
+  descriptionClassName?: string;
+  imageClassName?: string;
+}
 // export interface ExpertiseContent {
 // 	// Define expertise structure when needed
 // }
