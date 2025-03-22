@@ -2,7 +2,6 @@
 import React from "react";
 import { FramerModal, ModalContent } from "@/components/ui/modal";
 import { ExperienceItem } from "@/app/types/data";
-import { Button } from "@/components/ui/button";
 
 interface ExperienceModalProps {
 	isOpen: boolean;
@@ -10,14 +9,14 @@ interface ExperienceModalProps {
 	item: ExperienceItem | null;
 }
 
-  // Function to split text into paragraphs
-  const renderParagraphs = (text: string) => {
-    return text.split('\n\n').map((paragraph, index) => (
-      <p key={index} className={`${index > 0 ? 'mt-4' : ''}`}>
-        {paragraph}
-      </p>
-    ));
-  };
+// Function to split text into paragraphs
+const renderParagraphs = (text: string) => {
+	return text.split("\n\n").map((paragraph, index) => (
+		<p key={index} className={`${index > 0 ? "mt-4" : ""}`}>
+			{paragraph}
+		</p>
+	));
+};
 export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, setIsOpen, item }) => {
 	if (!item) return null;
 
