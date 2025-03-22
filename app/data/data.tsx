@@ -1,4 +1,4 @@
-import { Intro, ContactContent, ExperienceContent, ExpertiseContent, NavigationContent, About } from "../types/data";
+import { Intro, ExperienceContent, NavigationContent, About } from "../types/data";
 
 export const intro: Intro = {
 	greeting: "Hi, Ajeeth hier",
@@ -104,10 +104,10 @@ export const experience: ExperienceContent = {
 	],
 };
 
-export const expertise: ExpertiseContent = {
-	// You can add expertise data here when you build that section
-};
+// export const expertise: ExpertiseContent = {
+// 	// You can add expertise data here when you build that section
+// };
 
-export const contact: ContactContent = {
-	// You can add contact data here when you build that section
-};
+// export const contact: ContactContent = {
+// 	// You can add contact data here when you build that section
+// };
