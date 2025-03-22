@@ -2,6 +2,7 @@
 import React from "react";
 import { FramerModal, ModalContent } from "@/components/ui/modal";
 import { ExperienceItem } from "@/app/types/data";
+import { Button } from "@/components/ui/button";
 
 interface ExperienceModalProps {
 	isOpen: boolean;
@@ -9,6 +10,14 @@ interface ExperienceModalProps {
 	item: ExperienceItem | null;
 }
 
+  // Function to split text into paragraphs
+  const renderParagraphs = (text: string) => {
+    return text.split('\n\n').map((paragraph, index) => (
+      <p key={index} className={`${index > 0 ? 'mt-4' : ''}`}>
+        {paragraph}
+      </p>
+    ));
+  };
 export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, setIsOpen, item }) => {
 	if (!item) return null;
 
@@ -16,25 +25,15 @@ export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, setIsO
 		<FramerModal open={isOpen} setOpen={setIsOpen}>
 			<ModalContent>
 				<div className="flex flex-col space-y-4">
-					<div className="flex flex-col space-y-1.5">
-						<h2 className="text-2xl font-semibold leading-none tracking-tight">{item.title}</h2>
+					<div className="flex flex-col space-y-4">
+						<h2 className="text-5xl font-semibold leading-none tracking-tight">{item.title}</h2>
 						<p className="text-lg text-muted-foreground">{item.name}</p>
 						<p className="text-sm text-muted-foreground">{item.year}</p>
 					</div>
 					<div className="py-4">
-						<h3 className="text-lg font-medium mb-2">Description</h3>
-						<p className="text-sm text-muted-foreground">
-							{item.description || "No description available."}
+						<p className="text-md leading-relaxed text-muted-foreground">
+							{renderParagraphs(item.description) || "No description available."}
 						</p>
-					</div>
-					<div className="mt-4">
-						<button
-							onClick={() => setIsOpen(false)}
-							className="w-full p-3 bg-black dark:bg-white text-white dark:text-black rounded-md"
-							type="button"
-						>
-							Close
-						</button>
 					</div>
 				</div>
 			</ModalContent>

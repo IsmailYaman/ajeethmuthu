@@ -15,9 +15,9 @@ const Experience = () => {
 	};
 
 	return (
-		<div className="py-10">
+		<div className="py-10 w-full">
 			<h2 className="text-7xl font-bold mb-8">Ervaring</h2>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<ExperienceSection title="Studies" items={experience.education} onItemClick={handleItemClick} />
 				<ExperienceSection title="Werkervaring" items={experience.work} onItemClick={handleItemClick} />
 			</div>

@@ -33,7 +33,7 @@ export default function Home() {
 					</Section>
 				))}
 				<section className="text-stone-950 bg-white h-screen w-full sticky top-0">
-					<div className="max-w-7xl mx-auto">
+					<div className="max-w-7xl flex items-center h-screen mx-auto">
 						<Experience />
 					</div>
 				</section>

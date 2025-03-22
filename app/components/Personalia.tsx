@@ -58,7 +58,7 @@ export default function Personalia() {
 										variant={link.isPrimary ? "default" : "outline"}
 										className={`rounded-full cursor-pointer px-8 py-6 text-base font-medium ${
 											link.isPrimary
-												? "bg-green-400 text-black hover:bg-green-500"
+												? "bg-green-400 hover:bg-green-500"
 												: "border-green-400 text-green-400 hover:bg-green-400/10"
 										}`}
 									>
