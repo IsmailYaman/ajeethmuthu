@@ -9,6 +9,7 @@ interface SectionProps {
   id?: string;
   fromLeft?: boolean;
   delay?: number;
+  fullHeight?: boolean;
 }
 
 const Section = ({ 
@@ -16,7 +17,8 @@ const Section = ({
   className = "", 
   id,
   fromLeft = true,
-  delay = 0 
+  delay = 0,
+  fullHeight = false
 }: SectionProps) => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
@@ -25,7 +27,7 @@ const Section = ({
     <motion.div
       ref={sectionRef}
       id={id}
-      className={className}
+      className={`${fullHeight ? 'h-screen' : ''} ${className}`}
       style={{
         transform: isInView 
           ? "none" 

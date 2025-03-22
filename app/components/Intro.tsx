@@ -6,10 +6,9 @@ import ScrollBaseAnimation from "@/components/motion/ScrollBasedAnimation";
 
 export default function Intro() {
 	return (
-		<Section className="h-screen">
-			<div className="h-1/2 justify-content- grid place-content-center">
+		<Section className="w-full" fullHeight>
+			<div className="h-1/2 grid place-content-center">
 				<ScrollBaseAnimation
-					// delay={500}
 					baseVelocity={3}
 					scrollDependent={true}
 					clasname="font-bold text-stone-950 tracking-[-0.07em] leading-[90%]"
@@ -19,7 +18,6 @@ export default function Intro() {
 			</div>
 			<div className="h-1/2 grid place-content-center">
 				<ScrollBaseAnimation
-					// delay={500}
 					baseVelocity={-3}
 					scrollDependent={true}
 					clasname="font-bold tracking-[-0.07em] leading-[90%] text-green-500"
