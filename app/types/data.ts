@@ -41,10 +41,10 @@ export interface ExperienceContent {
 	}[];
 }
 
-export interface ExpertiseContent {
-	// Define expertise structure when needed
-}
+// export interface ExpertiseContent {
+// 	// Define expertise structure when needed
+// }
 
-export interface ContactContent {
-	// Define contact structure when needed
-}
+// export interface ContactContent {
+// 	// Define contact structure when needed
+// }
