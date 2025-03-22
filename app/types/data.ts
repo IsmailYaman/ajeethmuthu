@@ -36,13 +36,14 @@ export interface About {
   
   export interface ExperienceItem {
     title: string;
-    company: string;
+    name: string;
     description: string;
     year: string;
   }
   
   export interface ExperienceContent {
-    items: ExperienceItem[];
+    education: ExperienceItem[];
+    work: ExperienceItem[];
   }
   
   // Component props interfaces

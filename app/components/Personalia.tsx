@@ -24,10 +24,9 @@ export default function Personalia() {
 		<Section amount={0.5}>
 			<section id="over-mij" className="relative flex min-h-screen w-full items-center justify-center">
 				<div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
-					{/* Left Content */}
 					<div className="order-2 flex flex-col items-center text-center md:order-1 md:items-start md:text-left">
-						<h1 className="mb-4 text-5xl font-bold text-stone-950 md:text-6xl">{intro.greeting}</h1>
-						<p className="mb-6 text-2xl text-stone-950">
+						<h1 className="mb-4 text-5xl font-extrabold text-stone-950 md:text-6xl">{intro.greeting}</h1>
+						<p className="mb-6 text-4xl text-stone-950">
 							{intro.introduction}{" "}
 							<span className="text-green-400 h-8 inline-block relative">
 								<AnimatePresence mode="wait">
@@ -47,7 +46,7 @@ export default function Personalia() {
 								</AnimatePresence>
 							</span>
 						</p>
-						<p className="mb-8 text-lg text-gray-600">{intro.description}</p>
+						<p className="mb-8 text-lg text-stone-800">{intro.description}</p>
 						<div className="flex flex-wrap justify-center gap-4 md:justify-start">
 							{intro.socialLinks.map((link, index) => (
 								<Link

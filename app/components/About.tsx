@@ -17,7 +17,7 @@ const About: React.FC<AboutProps> = ({
   const defaultContainerClass = "flex flex-col md:flex-row w-full gap-8 py-12";
   const defaultTextContainerClass = "flex flex-col justify-center space-y-4 md:w-1/2";
   const defaultImageContainerClass = "flex justify-center items-center md:w-1/2";
-  const defaultTitleClass = "text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight";
+  const defaultTitleClass = "text-3xl md:text-4xl lg:text-4xl font-bold tracking-tight";
   const defaultDescriptionClass = "text-lg md:text-xl text-gray-600";
   const defaultImageClass = "rounded-lg object-cover w-full h-auto max-w-lg";
 
