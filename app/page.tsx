@@ -1,5 +1,5 @@
 import About from "./components/About";
-import Experience from "./components/Experience";
+import Experience from "./components/Experience/Experience";
 import Intro from "./components/Intro";
 import Personalia from "./components/Personalia";
 import Section from "./components/Section";
