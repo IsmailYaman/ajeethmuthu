@@ -1,8 +1,11 @@
+import ScrollBaseAnimation from "@/components/motion/ScrollBasedAnimation";
 import About from "./components/About";
+import Footer from "./components/Contact";
 import Experience from "./components/Experience/Experience";
 import Intro from "./components/Intro";
 import Personalia from "./components/Personalia";
 import Section from "./components/Section";
+import Skills from "./components/Skills";
 import { about } from "./data/data";
 
 export default function Home() {
@@ -32,11 +35,21 @@ export default function Home() {
 						</div>
 					</Section>
 				))}
-				<section className="text-stone-950 bg-white h-screen w-full sticky top-0">
-					<div className="max-w-7xl flex items-center h-screen mx-auto">
+				<section className="text-stone-950 bg-white w-full sticky top-0">
+					<div className="max-w-7xl flex items-center mx-auto">
 						<Experience />
 					</div>
 				</section>
+				<section className="text-stone-950 bg-white w-full sticky top-0">
+					<div className="max-w-7xl flex items-center mx-auto">
+						<Skills />
+					</div>
+				</section>
+				<section className="text-stone-950 bg-green-100 h-screen justify-items-center w-full sticky top-0">
+					<Footer />
+				</section>
+                <div>
+			</div>
 			</div>
 		</main>
 	);

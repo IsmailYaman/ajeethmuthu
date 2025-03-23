@@ -1,4 +1,4 @@
-import { Intro, ExperienceContent, NavigationContent, About } from "../types/data";
+import { Intro, ExperienceContent, NavigationContent, About, SkillsContent } from "../types/data";
 
 export const intro: Intro = {
 	greeting: "👋 Hi, Ajeeth hier.",
@@ -53,6 +53,7 @@ export const navigation: NavigationContent = {
 };
 
 export const experience: ExperienceContent = {
+    title: "Ervaring",
 	education: [
         {
             title: "Bachelor HBO-ICT Business & Data Management",
@@ -77,7 +78,7 @@ export const experience: ExperienceContent = {
             year: "2025",
         },
         {
-            title: "Data Stewart",
+            title: "Data Steward",
             name: "Gemeente Den Haag",
             description: `Tijdens mijn stage bij de Gemeente Den Haag heb ik een project mogen uitvoeren dat gericht was op het verbeteren van de datakwaliteit binnen de Jeugdgezondheidszorg (JGZ). De centrale vraag van het project was: "Welke stappen zijn vereist om het monitoren en rapporteren van de datakwaliteit te implementeren binnen de JGZ?" \n\nDe opdrachtgever wilde inzicht krijgen in de kansen op het gebied van data en hoe deze optimaal benut kunnen worden. Om hier antwoord op te geven, heb ik een uitgebreid onderzoeksrapport met aanbevelingen opgeleverd aan de JGZ. \n\nGedurende het project heb ik diverse technieken en methodieken toegepast, waaronder stakeholderanalyse, probleemanalyse, DMA-DMBOK (NORA Online), het Data Maturity Model, de LEAN-methode en het Veranderkompas.`,
             year: "2023",
@@ -105,9 +106,95 @@ export const experience: ExperienceContent = {
 	],
 };
 
-// export const expertise: ExpertiseContent = {
-// 	// You can add expertise data here when you build that section
-// };
+export const skills: SkillsContent = {
+    title: "Mijn Expertise",
+    soft_skills: [
+        {
+            title: "Analytisch",
+            level: "Gevorderd",
+        },
+        {
+            title: "Creatief",
+            level: "Gevorderd",
+        },
+        {
+            title: "Scrum",
+            level: "Basis",
+        },
+        {
+            title: "Lean Methode",
+            level: "Gevorderd",
+        },
+        {
+            title: "Proces Innovatie",
+            level: "Gevorderd",
+        },
+        {
+            title: "Project Management",
+            level: "Basis",
+        },
+        {
+            title: "Risk Management",
+            level: "Basis",
+        },
+        {
+            title: "Change Management",
+            level: "Gevorderd",
+        },
+        {
+            title: "Research",
+            level: "Basis",
+        },
+    ],
+    hard_skills: [
+        {
+            title: "Python",
+            level: "Basis",
+        },
+        {
+            title: "SQL",
+            level: "Basis",
+        },
+        {
+            title: "Power BI",
+            level: "Basis",
+        },
+        {
+            title: "Tableau",
+            level: "Basis",
+        },
+        {
+            title: "BPMN Model",
+            level: "Gevorderd",
+        },
+        {
+            title: "ArchiMate",
+            level: "Basis",
+        },
+        {
+            title: "BiSL",
+            level: "Basis",
+        },
+        {
+            title: "HTML5",
+            level: "Basis",
+        },
+        {
+            title: "CSS3",
+            level: "Basis",
+        },
+        {
+            title: "JavaScript",
+            level: "Basis",
+        },
+        {
+            title: "PHP",
+            level: "Basis",
+        },
+    ],
+};
+
+
 
 // export const contact: ContactContent = {
 // 	// You can add contact data here when you build that section
