@@ -45,7 +45,7 @@ export default function Home() {
 						<Skills />
 					</div>
 				</section>
-				<section className="text-stone-950 flex flex-col justify-center bg-green-100 h-screen w-full sticky top-0">
+				<section className="text-stone-950 overflow-hidden flex flex-col justify-center bg-green-100 h-screen w-full sticky top-0">
 					<Footer />
 				</section>
 			</div>

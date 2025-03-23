@@ -55,13 +55,13 @@ const Contact = () => {
 
 	return (
 		<>
-			<div className="flex gap-12 max-w-7xl mx-auto">
+			<div className="flex gap-12 h-[50vh] max-w-7xl mx-auto">
 				{/* Contact Information */}
 				<div className="w-1/2">
-					<h2 className="text-3xl text-stone-950 font-bold mb-6">Get in Touch</h2>
+					<h2 className="text-3xl text-stone-950 font-bold mb-6">Contact</h2>
 					<p className="mb-6 text-stone-950 max-w-md">
-						Feel free to reach out if you have any questions or want to work together. I'm always open to
-						discussing new projects, creative ideas, or opportunities.
+						Heb je vragen of wil je meer weten over mijn werk? Neem gerust contact met me op! Ik beantwoord
+						graag al je vragen en denk graag mee over hoe ik je verder kan helpen.
 					</p>
 
 					<div className="space-y-4">
@@ -252,14 +252,22 @@ const Contact = () => {
 					)}
 				</div>
 			</div>
-			<ScrollBaseAnimation
-				// delay={500}
-				baseVelocity={3}
-				scrollDependent={true}
-				clasname="font-bold text-sm bottom-0 text-stone-950 tracking-[-0.07em] leading-[90%]"
-			>
-				Ajeeth Muthu •
-			</ScrollBaseAnimation>
+			<div className="absolute bottom-0">
+				<ScrollBaseAnimation
+					// delay={500}
+					baseVelocity={-1}
+					scrollDependent={true}
+					clasname="font-bold text-sm text-stone-950 tracking-[-0.07em] leading-[90%]"
+				>
+					Ajeeth Muthu •
+				</ScrollBaseAnimation>
+			</div>
+			<div className="text-stone-300 absolute bottom-0 left-0 right-0 text-center">
+				Made with ❤️ by{" "}
+				<a href="https://www.yamotion.com" target="_blank" className="hover:text-green-400">
+					YAMOTION
+				</a>
+			</div>
 		</>
 	);
 };

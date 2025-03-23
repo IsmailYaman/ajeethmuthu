@@ -4,6 +4,7 @@ import { experience } from "../../data/data";
 import { ExperienceItem } from "../../types/data";
 import { ExperienceSection } from "./Section";
 import { ExperienceModal } from "./Modal";
+import Section from "../Section";
 
 const Experience = () => {
 	const [modalOpen, setModalOpen] = useState(false);
@@ -15,6 +16,7 @@ const Experience = () => {
 	};
 
 	return (
+        <Section animationType="slideLeft" className="w-full" amount={0.5}>
 		<div className="py-24 flex flex-col gap-8 w-full">
 			<h2 className="text-7xl font-bold">{experience.title}</h2>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -24,6 +26,7 @@ const Experience = () => {
 
 			<ExperienceModal isOpen={modalOpen} setIsOpen={setModalOpen} item={selectedItem} />
 		</div>
+        </Section>
 	);
 };
 
