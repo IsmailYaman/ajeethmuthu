@@ -1,4 +1,3 @@
-import ScrollBaseAnimation from "@/components/motion/ScrollBasedAnimation";
 import About from "./components/About";
 import Footer from "./components/Contact";
 import Experience from "./components/Experience/Experience";

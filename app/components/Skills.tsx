@@ -1,6 +1,5 @@
 import React from "react";
 import { skills } from "../data/data";
-import { ExperienceSection } from "./Experience/Section";
 
 const Skills = () => {
 	return (
