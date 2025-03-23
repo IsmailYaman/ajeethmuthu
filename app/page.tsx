@@ -23,7 +23,7 @@ export default function Home() {
 					<Section
 						key={index}
 						className={`text-stone-950 justify-items-center h-screen w-full sticky top-0 ${
-							index % 2 === 0 ? "bg-green-100" : "bg-white"
+							index % 2 === 0 ? "bg-sky-100" : "bg-white"
 						}`}
 						animationType={"none"}
 						delay={0.2}
@@ -44,7 +44,7 @@ export default function Home() {
 						<Skills />
 					</div>
 				</section>
-				<section className="text-stone-950 overflow-hidden flex flex-col justify-center bg-green-100 h-screen w-full sticky top-0">
+				<section className="text-stone-950 overflow-hidden flex flex-col justify-center bg-sky-100 h-screen w-full sticky top-0">
 					<Footer />
 				</section>
 			</div>

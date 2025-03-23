@@ -28,7 +28,7 @@ export default function Personalia() {
 						<h1 className="mb-4 text-5xl font-extrabold text-stone-950 md:text-6xl">{intro.greeting}</h1>
 						<p className="mb-6 text-4xl text-stone-950">
 							{intro.introduction}{" "}
-							<span className="text-green-400 h-8 inline-block relative">
+							<span className="text-sky-500 h-8 inline-block relative">
 								<AnimatePresence mode="wait">
 									<motion.span
 										key={currentIndex}
@@ -58,8 +58,8 @@ export default function Personalia() {
 										variant={link.isPrimary ? "default" : "outline"}
 										className={`rounded-full cursor-pointer px-8 py-6 text-base font-medium ${
 											link.isPrimary
-												? "bg-green-400 hover:bg-green-500"
-												: "border-green-400 text-green-400 hover:bg-green-400/10"
+												? "bg-sky-500 hover:bg-sky-500"
+												: "border-sky-400 text-sky-500 hover:bg-sky-500/10"
 										}`}
 									>
 										{link.name}

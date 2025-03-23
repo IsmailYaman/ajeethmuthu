@@ -73,7 +73,7 @@ function DesktopNavigation() {
       <div className="mx-6 flex items-center">
         <Link href="/" className="text-xl font-bold">
           <span className="text-white">{navigation.logo.text}</span>
-          <span className="text-green-500">{navigation.logo.highlight}</span>
+          <span className="text-sky-500">{navigation.logo.highlight}</span>
         </Link>
       </div>
 
@@ -93,7 +93,7 @@ function MobileNavigation() {
     <nav className="flex w-full items-center justify-between rounded-full bg-stone-950/80 px-4 py-2 backdrop-blur-sm">
       <Link href="/" className="text-lg font-bold">
         <span className="text-white">{navigation.logo.text}</span>
-        <span className="text-green-500">{navigation.logo.highlight}</span>
+        <span className="text-sky-500">{navigation.logo.highlight}</span>
       </Link>
 
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -128,7 +128,7 @@ function MobileNavigation() {
                     >
                       <Link
                         href={item.href}
-                        className="text-3xl font-bold text-white transition-colors hover:text-green-400"
+                        className="text-3xl font-bold text-white transition-colors hover:text-sky-500"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.name}

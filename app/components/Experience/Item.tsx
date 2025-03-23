@@ -10,7 +10,7 @@ interface ExperienceItemProps {
 export const ExperienceItemSolo: React.FC<ExperienceItemProps> = ({ item, onClick }) => {
 	return (
 		<div
-			className="p-4 border border-transparent bg-green-100 hover:border hover:border-green-500 rounded-lg transition-all cursor-pointer"
+			className="p-4 border border-transparent bg-sky-100 hover:border hover:border-sky-500 rounded-lg transition-all cursor-pointer"
 			onClick={() => onClick(item)}
 		>
             <h4 className="text-xl font-medium group-hover:font-light">{item.title}</h4>
