@@ -12,9 +12,9 @@ interface ExperienceModalProps {
 // Function to split text into paragraphs
 const renderParagraphs = (text: string) => {
 	return text.split("\n\n").map((paragraph, index) => (
-		<p key={index} className={`${index > 0 ? "mt-4" : ""}`}>
+		<span key={index} className={`${index > 0 ? "mt-4" : ""}`}>
 			{paragraph}
-		</p>
+		</span>
 	));
 };
 export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, setIsOpen, item }) => {
