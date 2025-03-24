@@ -9,7 +9,7 @@ interface FormData {
 	message: string;
 }
 
-const Contact = () => {
+const Footer = () => {
 	const [formData, setFormData] = useState<FormData>({
 		name: "",
 		email: "",
@@ -262,14 +262,8 @@ const Contact = () => {
 					Ajeeth Muthu •
 				</ScrollBaseAnimation>
 			</div>
-			<div className="text-stone-300 absolute bottom-0 left-0 right-0 text-center">
-				Made with ❤️ by{" "}
-				<a href="https://www.yamotion.com" target="_blank" className="hover:text-sky-500">
-					YAMOTION
-				</a>
-			</div>
 		</>
 	);
 };
 
-export default Contact;
+export default Footer;

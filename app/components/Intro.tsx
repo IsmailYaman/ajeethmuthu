@@ -12,7 +12,7 @@ export default function Intro() {
 					// delay={500}
 					baseVelocity={3}
 					scrollDependent={true}
-					clasname="font-bold text-stone-950 tracking-[-0.07em] leading-[90%]"
+					clasname="font-bold text-stone-950 tracking-[-0.07em] leading-[1.3]"
 				>
 					Ajeeth • Ajeeth •       
 				</ScrollBaseAnimation>
@@ -22,7 +22,7 @@ export default function Intro() {
 					// delay={500}
 					baseVelocity={-3}
 					scrollDependent={true}
-					clasname="font-bold tracking-[-0.07em] leading-[90%] text-sky-500"
+					clasname="font-bold tracking-[-0.07em] leading-[100%] text-sky-500"
 				>
 					Muthu • Muthu • 
 				</ScrollBaseAnimation>
