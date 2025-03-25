@@ -1,63 +1,37 @@
 "use client";
 import ScrollBaseAnimation from "@/components/motion/ScrollBasedAnimation";
 import { Button } from "@/components/ui/button";
-import React, { useState } from "react";
-
-interface FormData {
-	name: string;
-	email: string;
-	message: string;
-}
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
 
 const Footer = () => {
-	const [formData, setFormData] = useState<FormData>({
-		name: "",
-		email: "",
-		message: "",
-	});
-	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
-	const [error, setError] = useState("");
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-		const { name, value } = e.target;
-		setFormData((prev) => ({
-			...prev,
-			[name]: value,
-		}));
-	};
-
-	const handleSubmit = async (e: React.FormEvent) => {
-		e.preventDefault();
-		setIsSubmitting(true);
-		setError("");
-
-		try {
-			// In a real app, you would send this data to your server
-			// await fetch('/api/contact', {
-			//   method: 'POST',
-			//   headers: { 'Content-Type': 'application/json' },
-			//   body: JSON.stringify(formData)
-			// });
-
-			// Simulate API call
-			await new Promise((resolve) => setTimeout(resolve, 1000));
-
+	// Check if the URL has a success parameter (will be used for redirect)
+	useEffect(() => {
+		// Check if the URL contains a success parameter
+		const urlParams = new URLSearchParams(window.location.search);
+		if (urlParams.get("success") === "true") {
 			setSubmitted(true);
-			setFormData({ name: "", email: "", message: "" });
-		} catch (err) {
-			setError("Something went wrong. Please try again later.");
-			console.error(err);
-		} finally {
-			setIsSubmitting(false);
+			// Remove the query parameter from the URL without refreshing the page
+			window.history.replaceState({}, document.title, window.location.pathname);
 		}
+	}, []);
+
+	// Handle form submission
+	const handleSubmit = (e:any) => {
+		setIsSubmitting(true);
+		// The form will be handled by FormSubmit
+		// No need to prevent default as we want the form to submit to FormSubmit
 	};
 
 	return (
 		<>
-			<div className="flex gap-12 h-[50vh] max-w-7xl mx-auto">
+			<div className="flex flex-col md:flex-row gap-12 min-h-[50vh] max-w-7xl mx-auto px-4 py-12">
 				{/* Contact Information */}
-				<div className="w-1/2">
+				<div className="w-full md:w-1/2">
 					<h2 className="text-3xl text-stone-950 font-bold mb-6">Contact</h2>
 					<p className="mb-6 text-stone-950 max-w-md">
 						Heb je vragen of wil je meer weten over mijn werk? Neem gerust contact met me op! Ik beantwoord
@@ -155,7 +129,7 @@ const Footer = () => {
 				</div>
 
 				{/* Contact Form */}
-				<div className="w-1/2">
+				<div className="w-full md:w-1/2">
 					<h2 className="text-3xl text-stone-950 font-bold mb-6">Laten we babbelen!</h2>
 
 					{submitted ? (
@@ -190,52 +164,66 @@ const Footer = () => {
 							</div>
 						</div>
 					) : (
-						<form onSubmit={handleSubmit} className="space-y-4">
-							{error && (
-								<div className="bg-red-900 border border-red-800 text-white p-3 rounded-md">
-									{error}
-								</div>
-							)}
+						<form
+							action="https://formsubmit.co/iso_yaman@outlook.com"
+							method="POST"
+							onSubmit={handleSubmit}
+							className="space-y-4"
+						>
+							{/* FormSubmit configuration */}
+							<input
+								type="hidden"
+								name="_next"
+								value={
+									typeof window !== "undefined"
+										? `${window.location.href.split("?")[0]}?success=true`
+										: ""
+								}
+							/>
+							<input type="hidden" name="_subject" value="Nieuw contactformulier bericht" />
+							<input type="hidden" name="_captcha" value="false" />
+							<input type="hidden" name="_template" value="table" />
+							<input type="text" name="_honey" style={{ display: "none" }} />
 
 							<div>
-								<label htmlFor="name" className="block text-sm font-medium mb-1"></label>
+								<label htmlFor="name" className="block text-sm font-medium mb-1">
+									Naam
+								</label>
 								<input
 									type="text"
 									id="name"
 									name="name"
-									value={formData.name}
-									onChange={handleChange}
 									required
-									className="w-full px-4 py-2 bg-white placeholder-stone-700 border border-sky-400 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
-									placeholder="Naam"
+									className="w-full px-4 py-2 bg-white placeholder-stone-400 border border-sky-400 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
+									placeholder="Jouw naam"
 								/>
 							</div>
 
 							<div>
-								<label htmlFor="email" className="block text-sm font-medium mb-1"></label>
+								<label htmlFor="email" className="block text-sm font-medium mb-1">
+									E-mail
+								</label>
 								<input
 									type="email"
 									id="email"
 									name="email"
-									value={formData.email}
-									onChange={handleChange}
 									required
-									className="w-full px-4 py-2 bg-white border placeholder-stone-700 border-sky-400 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
-									placeholder="E-mail"
+									className="w-full px-4 py-2 bg-white border placeholder-stone-400 border-sky-400 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
+									placeholder="jouw@email.nl"
 								/>
 							</div>
 
 							<div>
-								<label htmlFor="message" className="block text-sm font-medium mb-1"></label>
+								<label htmlFor="message" className="block text-sm font-medium mb-1">
+									Bericht
+								</label>
 								<textarea
 									id="message"
 									name="message"
-									value={formData.message}
-									onChange={handleChange}
 									required
 									rows={5}
-									className="w-full px-4 py-2 bg-white border placeholder-stone-700 border-sky-400 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
-									placeholder="Bericht"
+									className="w-full px-4 py-2 bg-white border placeholder-stone-400 border-sky-400 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
+									placeholder="Typ hier je bericht..."
 								/>
 							</div>
 
@@ -243,7 +231,7 @@ const Footer = () => {
 								type="submit"
 								disabled={isSubmitting}
 								className={`w-full py-3 px-6 rounded-full cursor-pointer text-white font-medium transition-colors ${
-									isSubmitting ? "bg-gray-600 cursor-not-allowed" : "bg-sky-500 hover:bg-sky-500"
+									isSubmitting ? "bg-gray-600 cursor-not-allowed" : "bg-sky-500 hover:bg-sky-600"
 								}`}
 							>
 								{isSubmitting ? "Bezig met versturen..." : "Verstuur bericht"}
@@ -252,16 +240,25 @@ const Footer = () => {
 					)}
 				</div>
 			</div>
-			<div className="absolute bottom-0">
+			<div className="bottom-0 absolute left-0 w-full right-0 justify-center flex">
+				<div className="flex align-middle">
+					<span className="text-white font-black">Ajeeth Muthu ×&nbsp;</span>
+					{""}
+					<Link href="https://yamotion.com/">
+						<img src="/img/yamotion.svg" alt="footer" className="w-24 h-full" />
+					</Link>
+				</div>
+			</div>
+
+			{/* <div className="absolute bottom-0">
 				<ScrollBaseAnimation
-					// delay={500}
 					baseVelocity={-1}
 					scrollDependent={true}
 					clasname="font-bold text-sm text-stone-950 tracking-[-0.07em] leading-[90%]"
 				>
 					Ajeeth Muthu •
 				</ScrollBaseAnimation>
-			</div>
+			</div> */}
 		</>
 	);
 };
