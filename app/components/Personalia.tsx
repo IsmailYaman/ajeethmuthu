@@ -23,7 +23,7 @@ export default function Personalia() {
 	return (
 		<Section amount={0.5}>
 			<section id="over-mij" className="relative flex min-h-screen w-full items-center justify-center">
-				<div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center">
+				<div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center mx-4">
 					<div className="order-2 flex flex-col items-center text-center md:order-1 md:items-start md:text-left">
 						<h1 className="mb-4 text-5xl font-extrabold text-stone-950 md:text-6xl">{intro.greeting}</h1>
 						<p className="mb-6 text-4xl text-stone-950">
@@ -58,8 +58,8 @@ export default function Personalia() {
 										variant={link.isPrimary ? "default" : "outline"}
 										className={`rounded-full cursor-pointer px-8 py-6 text-base font-medium ${
 											link.isPrimary
-												? "bg-sky-500 hover:bg-sky-500"
-												: "border-sky-400 text-sky-500 hover:bg-sky-500/10"
+												? "bg-sky-500 hover:bg-sky-600"
+												: "border-sky-400 text-sky-500 hover:text-sky-500 hover:bg-sky-500/10"
 										}`}
 									>
 										{link.name}

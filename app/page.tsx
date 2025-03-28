@@ -19,6 +19,16 @@ export default function Home() {
 						<Personalia />
 					</div>
 				</section>
+				<section className="text-stone-950 bg-white w-full sticky top-0">
+					<div className="max-w-7xl flex items-center mx-auto">
+						<Experience />
+					</div>
+				</section>
+				<section className="text-stone-950 bg-white w-full sticky top-0">
+					<div className="max-w-7xl flex items-center mx-auto">
+						<Skills />
+					</div>
+				</section>
 				{about.map((item, index) => (
 					<Section
 						key={index}
@@ -34,16 +44,6 @@ export default function Home() {
 						</div>
 					</Section>
 				))}
-				<section className="text-stone-950 bg-white w-full sticky top-0">
-					<div className="max-w-7xl flex items-center mx-auto">
-						<Experience />
-					</div>
-				</section>
-				<section className="text-stone-950 bg-white w-full sticky top-0">
-					<div className="max-w-7xl flex items-center mx-auto">
-						<Skills />
-					</div>
-				</section>
 				<section className="text-stone-950 overflow-hidden flex flex-col justify-center bg-sky-100 h-screen w-full sticky top-0">
 					<Footer />
 				</section>

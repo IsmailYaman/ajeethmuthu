@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import Section from "./Section";
 
 const Footer = () => {
 	const [submitted, setSubmitted] = useState(false);
@@ -28,7 +29,7 @@ const Footer = () => {
 	};
 
 	return (
-		<>
+		<Section animationType="scaleUp" delay={0.2}>
 			<div className="flex flex-col md:flex-row gap-12 min-h-[50vh] max-w-7xl mx-auto px-4 py-12">
 				{/* Contact Information */}
 				<div className="w-full md:w-1/2">
@@ -259,7 +260,7 @@ const Footer = () => {
 					Ajeeth Muthu •
 				</ScrollBaseAnimation>
 			</div> */}
-		</>
+		</Section>
 	);
 };
 

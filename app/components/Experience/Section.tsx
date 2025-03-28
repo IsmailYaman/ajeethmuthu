@@ -11,7 +11,7 @@ interface ExperienceSectionProps {
 
 export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ title, items, onItemClick }) => {
 	return (
-		<div>
+		<div className="w-full">
 			<h3 className="text-3xl font-semibold mb-6">{title}</h3>
 			<div className="space-y-6">
 				{items.map((item, index) => (

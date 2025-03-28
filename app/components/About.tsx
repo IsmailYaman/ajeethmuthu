@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { AboutProps } from '@/app/types/data';
+import Section from './Section';
 
 
 const About: React.FC<AboutProps> = ({
@@ -60,6 +61,7 @@ const About: React.FC<AboutProps> = ({
   );
 
   return (
+    <Section animationType='slideLeft' delay={0.2}>
     <div className={combinedContainerClass}>
       {imageFirst ? (
         <>
@@ -73,6 +75,7 @@ const About: React.FC<AboutProps> = ({
         </>
       )}
     </div>
+    </Section>
   );
 };
 
