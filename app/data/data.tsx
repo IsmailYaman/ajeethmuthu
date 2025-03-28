@@ -118,24 +118,12 @@ export const skills: SkillsContent = {
             level: "Gevorderd",
         },
         {
-            title: "Scrum",
-            level: "Basis",
-        },
-        {
             title: "Lean Methode",
             level: "Gevorderd",
         },
         {
             title: "Proces Innovatie",
             level: "Gevorderd",
-        },
-        {
-            title: "Project Management",
-            level: "Basis",
-        },
-        {
-            title: "Risk Management",
-            level: "Basis",
         },
         {
             title: "Change Management",
@@ -145,8 +133,24 @@ export const skills: SkillsContent = {
             title: "Research",
             level: "Basis",
         },
+        {
+            title: "Scrum",
+            level: "Basis",
+        },
+        {
+            title: "Project Management",
+            level: "Basis",
+        },
+        {
+            title: "Risk Management",
+            level: "Basis",
+        },
     ],
     hard_skills: [
+        {
+            title: "BPMN Model",
+            level: "Gevorderd",
+        },
         {
             title: "Python",
             level: "Basis",
@@ -162,10 +166,6 @@ export const skills: SkillsContent = {
         {
             title: "Tableau",
             level: "Basis",
-        },
-        {
-            title: "BPMN Model",
-            level: "Gevorderd",
         },
         {
             title: "ArchiMate",

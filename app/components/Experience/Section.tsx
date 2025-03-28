@@ -2,6 +2,7 @@
 import { ExperienceItem } from "@/app/types/data";
 import React from "react";
 import { ExperienceItemSolo } from "./Item";
+import Section from "../Section";
 
 interface ExperienceSectionProps {
 	title: string;
@@ -11,11 +12,13 @@ interface ExperienceSectionProps {
 
 export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ title, items, onItemClick }) => {
 	return (
-		<div className="w-full">
+		<div className="w-full bg-sky-50 rounded-lg p-6 h-fit">
 			<h3 className="text-3xl font-semibold mb-6">{title}</h3>
-			<div className="space-y-6">
+			<div className="space-y-6 p-2">
 				{items.map((item, index) => (
-					<ExperienceItemSolo key={index} item={item} onClick={onItemClick} />
+					<Section animationType="slideLeft" amount={0.5} key={index}>
+						<ExperienceItemSolo key={index} item={item} onClick={onItemClick} />
+					</Section>
 				))}
 			</div>
 		</div>

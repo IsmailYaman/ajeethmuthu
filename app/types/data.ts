@@ -46,6 +46,16 @@ export interface ExperienceContent {
 	education: ExperienceItem[];
 	work: ExperienceItem[];
 }
+export interface SkillsItem {
+	title: string;
+	level: string;
+}
+
+export interface SkillsContent {
+    title: string;
+	hard_skills: SkillsItem[];
+	soft_skills: SkillsItem[];
+}
 
 // Component props interfaces
 export interface BaseComponentProps {

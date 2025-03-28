@@ -1,16 +1,19 @@
 import React from "react";
 import { skills } from "../data/data";
+import Section from "./Section";
+import { SkillsSection } from "./Skills/Section";
 
 const Skills = () => {
 	return (
-		<div className="py-24 flex flex-col gap-8 w-full">
+		<Section animationType="slideLeft" className="w-full" amount={0.5}>
+		<div className="py-24 mx-4 flex flex-col gap-8">
 			<h2 className="text-7xl font-bold">{skills.title}</h2>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <h2 className="text-4xl text-orange-400 font-bold">🚧 Komt er aan 🚧</h2>
-				{/* <ExperienceSection title="Studies" itesms={skills.soft_skills}  />
-				<ExperienceSection title="Werkervaring" items={skills.hard_skills}/> */}
+			<div className="flex flex-col sm:flex-row w-full gap-8 ">
+				<SkillsSection title="Hard skills" items={skills.hard_skills}/>
+				<SkillsSection title="Soft skills" items={skills.soft_skills}/>
 			</div>
 		</div>
+        </Section>
 	);
 };
 
