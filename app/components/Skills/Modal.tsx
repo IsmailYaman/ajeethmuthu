@@ -9,14 +9,6 @@ interface SkillsModalProps {
 	item: SkillsItem | null;
 }
 
-// Function to split text into paragraphs
-const renderParagraphs = (text: string) => {
-	return text.split("\n\n").map((paragraph, index) => (
-		<span key={index} className={`${index > 0 ? "mt-4" : ""}`}>
-			{paragraph}
-		</span>
-	));
-};
 export const SkillsModal: React.FC<SkillsModalProps> = ({ isOpen, setIsOpen, item }) => {
 	if (!item) return null;
 

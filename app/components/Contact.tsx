@@ -1,7 +1,5 @@
 "use client";
-import ScrollBaseAnimation from "@/components/motion/ScrollBasedAnimation";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Section from "./Section";
@@ -22,7 +20,7 @@ const Footer = () => {
 	}, []);
 
 	// Handle form submission
-	const handleSubmit = (e:any) => {
+	const handleSubmit = () => {
 		setIsSubmitting(true);
 		// The form will be handled by FormSubmit
 		// No need to prevent default as we want the form to submit to FormSubmit
