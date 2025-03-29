@@ -3,7 +3,6 @@ import Footer from "./components/Contact";
 import Experience from "./components/Experience/Experience";
 import Intro from "./components/Intro";
 import Personalia from "./components/Personalia";
-import Section from "./components/Section";
 import Skills from "./components/Skills";
 import { about } from "./data/data";
 
@@ -29,21 +28,21 @@ export default function Home() {
 						<Skills />
 					</div>
 				</section>
-				{about.map((item, index) => (
-					<Section
-						key={index}
-						className={`text-stone-950 justify-items-center sm:h-screen h-fit w-full sm:sticky sm:top-0 ${
-							index % 2 === 0 ? "bg-sky-100" : "bg-white"
-						}`}
-						animationType={"none"}
-						delay={0.2}
-						fullHeight={true}
-					>
-						<section className="max-w-7xl flex items-center sm:h-screen h-fit mx-auto p-4">
-							<About data={item} imageFirst={index % 2 === 1} />
-						</section>
-					</Section>
-				))}
+				<section id="over-mij" className="text-stone-950 sm:h-screen h-fit bg-white w-full sm:sticky sm:top-0">
+					<div className="max-w-7xl justify-items-center mx-auto">
+						<About data={about[0]} imageFirst={false} />
+					</div>
+				</section>
+				<section id="over-mij" className="text-stone-950 sm:h-screen h-fit bg-sky-100 w-full sm:sticky sm:top-0">
+					<div className="max-w-7xl justify-items-center mx-auto">
+						<About data={about[1]} imageFirst={true} />
+					</div>
+				</section>
+				<section id="over-mij" className="text-stone-950 sm:h-screen h-fit bg-white w-full sm:sticky sm:top-0">
+					<div className="max-w-7xl justify-items-center mx-auto">
+						<About data={about[2]} imageFirst={false} />
+					</div>
+				</section>
 				<section
 					id="contact"
 					className="text-stone-950 overflow-hidden flex flex-col justify-center bg-sky-100 h-screen w-full sticky top-0"

@@ -47,7 +47,7 @@ export const navigation: NavigationContent = {
 	links: [
 		{ name: "Ervaring", href: "#ervaring" },
 		{ name: "Expertise", href: "#expertise" },
-		{ name: "Over mij", href: "#over" },
+		{ name: "Over mij", href: "#over-mij" },
 		{ name: "Contact", href: "#contact" },
 	],
 };
