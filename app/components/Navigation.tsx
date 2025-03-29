@@ -24,7 +24,7 @@ export default function Navigation() {
 
 	useEffect(() => {
 		const checkScreenSize = (): void => {
-			setIsMobile(window.innerWidth < 550);
+			setIsMobile(window.innerWidth < 640);
 		};
 
 		const handleScroll = (): void => {

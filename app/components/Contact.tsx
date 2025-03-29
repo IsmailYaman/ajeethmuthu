@@ -239,25 +239,16 @@ const Footer = () => {
 					)}
 				</div>
 			</div>
-			<div className="bottom-0 absolute left-0 w-full right-0 justify-center flex">
-				<div className="flex align-middle">
-					<span className="text-white font-black">Ajeeth Muthu ×&nbsp;</span>
-					{""}
-					<Link href="https://yamotion.com/">
-						<img src="/img/yamotion.svg" alt="footer" className="w-24 h-full" />
-					</Link>
-				</div>
+			<div className="bottom-5 absolute left-0 w-full right-0 justify-center flex">
+				<Section animationType="slideUp" delay={0.3}>
+					<div className="flex align-middle">
+						<span className="text-white font-black">Ajeeth Muthu ×&nbsp;</span>
+						<Link href="https://yamotion.com/">
+							<img src="/img/yamotion.svg" alt="footer" className="w-24 h-full" />
+						</Link>
+					</div>
+				</Section>
 			</div>
-
-			{/* <div className="absolute bottom-0">
-				<ScrollBaseAnimation
-					baseVelocity={-1}
-					scrollDependent={true}
-					clasname="font-bold text-sm text-stone-950 tracking-[-0.07em] leading-[90%]"
-				>
-					Ajeeth Muthu •
-				</ScrollBaseAnimation>
-			</div> */}
 		</Section>
 	);
 };
