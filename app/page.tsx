@@ -3,7 +3,7 @@ import Footer from "./components/Contact";
 import Experience from "./components/Experience/Experience";
 import Intro from "./components/Intro";
 import Personalia from "./components/Personalia";
-import Skills from "./components/Skills";
+import Skills from "./components/Skills/Skills";
 import { about } from "./data/data";
 
 export default function Home() {
@@ -33,7 +33,10 @@ export default function Home() {
 						<About data={about[0]} imageFirst={false} />
 					</div>
 				</section>
-				<section id="over-mij" className="text-stone-950 sm:h-screen h-fit bg-sky-100 w-full sm:sticky sm:top-0">
+				<section
+					id="over-mij"
+					className="text-stone-950 sm:h-screen h-fit bg-sky-100 w-full sm:sticky sm:top-0"
+				>
 					<div className="max-w-7xl justify-items-center mx-auto">
 						<About data={about[1]} imageFirst={true} />
 					</div>
