@@ -21,8 +21,8 @@ export default function Personalia() {
 	}, []);
 
 	return (
-		<Section amount={0.5}>
-			<section id="over-mij" className="relative flex min-h-screen w-full items-center justify-center">
+		<Section id="home" amount={0.5}>
+			<section className="relative flex min-h-screen w-full items-center justify-center">
 				<div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center mx-4">
 					<div className="order-2 flex flex-col items-center text-center md:order-1 md:items-start md:text-left">
 						<h1 className="mb-4 text-5xl font-extrabold text-stone-950 md:text-6xl">{intro.greeting}</h1>

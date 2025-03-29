@@ -11,20 +11,20 @@ export default function Home() {
 	return (
 		<main className="flex flex-col mx-auto w-full">
 			<div className="wrapper">
-				<section className="text-stone-950 h-screen w-full sticky top-0">
+				<section className="text-stone-950 bg-white h-screen w-full sticky hidden sm:block top-0">
 					<Intro />
 				</section>
-				<section className="text-stone-950 h-screen bg-white w-full sticky top-0">
+				<section id="home" className="text-stone-950 sm:h-screen h-fit bg-white w-full sm:sticky sm:top-0">
 					<div className="max-w-7xl justify-items-center mx-auto">
 						<Personalia />
 					</div>
 				</section>
-				<section className="text-stone-950 bg-white w-full sticky top-0">
+				<section id="ervaring" className="text-stone-950 sm:h-screen h-fit bg-white w-full sm:sticky sm:top-0">
 					<div className="max-w-7xl flex items-center mx-auto">
 						<Experience />
 					</div>
 				</section>
-				<section className="text-stone-950 bg-white w-full sticky top-0">
+				<section id="expertise" className="text-stone-950 sm:h-screen h-fit bg-white w-full sm:sticky sm:top-0">
 					<div className="max-w-7xl flex items-center mx-auto">
 						<Skills />
 					</div>
@@ -32,19 +32,22 @@ export default function Home() {
 				{about.map((item, index) => (
 					<Section
 						key={index}
-						className={`text-stone-950 justify-items-center h-screen w-full sticky top-0 ${
+						className={`text-stone-950 justify-items-center sm:h-screen h-fit w-full sm:sticky sm:top-0 ${
 							index % 2 === 0 ? "bg-sky-100" : "bg-white"
 						}`}
 						animationType={"none"}
 						delay={0.2}
 						fullHeight={true}
 					>
-						<div className="max-w-7xl flex items-center h-screen mx-auto p-4">
+						<section className="max-w-7xl flex items-center sm:h-screen h-fit mx-auto p-4">
 							<About data={item} imageFirst={index % 2 === 1} />
-						</div>
+						</section>
 					</Section>
 				))}
-				<section className="text-stone-950 overflow-hidden flex flex-col justify-center bg-sky-100 h-screen w-full sticky top-0">
+				<section
+					id="contact"
+					className="text-stone-950 overflow-hidden flex flex-col justify-center bg-sky-100 h-screen w-full sticky top-0"
+				>
 					<Footer />
 				</section>
 			</div>

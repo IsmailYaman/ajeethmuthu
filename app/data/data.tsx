@@ -45,9 +45,9 @@ export const navigation: NavigationContent = {
 		highlight: "Muthu",
 	},
 	links: [
-		{ name: "Over mij", href: "#over-mij" },
 		{ name: "Ervaring", href: "#ervaring" },
 		{ name: "Expertise", href: "#expertise" },
+		{ name: "Over mij", href: "#over" },
 		{ name: "Contact", href: "#contact" },
 	],
 };
@@ -107,7 +107,7 @@ export const experience: ExperienceContent = {
 };
 
 export const skills: SkillsContent = {
-    title: "Mijn Expertise",
+    title: "Expertise",
     soft_skills: [
         {
             title: "Analytisch",
