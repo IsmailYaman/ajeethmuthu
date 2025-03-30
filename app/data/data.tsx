@@ -112,90 +112,104 @@ export const skills: SkillsContent = {
         {
             title: "Analytisch",
             level: "Gevorderd",
+            icon: "BarChart2",
         },
         {
             title: "Creatief",
             level: "Gevorderd",
+            icon: "Lightbulb",
         },
         {
             title: "Lean Methode",
             level: "Gevorderd",
+            icon: "Workflow",
         },
         {
             title: "Proces Innovatie",
             level: "Gevorderd",
+            icon: "Sparkles",
         },
         {
             title: "Change Management",
             level: "Gevorderd",
+            icon: "RefreshCw",
         },
         {
             title: "Research",
             level: "Basis",
+            icon: "Search",
         },
         {
             title: "Scrum",
             level: "Basis",
+            icon: "Trello",
         },
         {
             title: "Project Management",
             level: "Basis",
+            icon: "ClipboardList",
         },
         {
             title: "Risk Management",
             level: "Basis",
+            icon: "Shield",
         },
     ],
     hard_skills: [
         {
             title: "BPMN Model",
             level: "Gevorderd",
+            icon: "GitBranch",
         },
         {
             title: "Python",
             level: "Basis",
+            icon: "Code",
         },
         {
             title: "SQL",
             level: "Basis",
+            icon: "Database",
         },
         {
             title: "Power BI",
             level: "Basis",
+            icon: "PieChart",
         },
         {
             title: "Tableau",
             level: "Basis",
+            icon: "BarChart",
         },
         {
             title: "ArchiMate",
             level: "Basis",
+            icon: "Layers",
         },
         {
             title: "BiSL",
             level: "Basis",
+            icon: "FileText",
         },
         {
             title: "HTML5",
             level: "Basis",
+            icon: "FileCode",
         },
         {
             title: "CSS3",
             level: "Basis",
+            icon: "Palette",
         },
         {
             title: "JavaScript",
             level: "Basis",
+            icon: "Braces",
         },
         {
             title: "PHP",
             level: "Basis",
+            icon: "Server",
         },
     ],
 };
-
-
-
-// export const contact: ContactContent = {
-// 	// You can add contact data here when you build that section
-// };

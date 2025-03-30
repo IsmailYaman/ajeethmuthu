@@ -73,17 +73,13 @@ export interface AboutProps extends BaseComponentProps {
 	imageClassName?: string;
 }
 
-export interface Skill {
+export interface SkillsItem {
     title: string;
     level: string;
+    icon?: string; // Name of the Lucide icon
 }
-
 export interface SkillsContent extends BaseComponentProps {
     title: string;
-    soft_skills: Skill[];
-    hard_skills: Skill[];
+    soft_skills: SkillsItem[];
+    hard_skills: SkillsItem[];
 }
-
-// export interface ContactProps extends BaseComponentProps {
-//   // Define contact props when needed
-// }
