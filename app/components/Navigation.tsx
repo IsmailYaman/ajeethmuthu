@@ -19,8 +19,9 @@ interface NavItemProps {
 
 export default function Navigation() {
 	const [isMobile, setIsMobile] = useState<boolean>(false);
-	const [showNav, setShowNav] = useState<boolean>(false);
+	const [showNav, setShowNav] = useState<boolean>(true);
 	const [activeSection, setActiveSection] = useState<string>("");
+	const [lastScrollY, setLastScrollY] = useState<number>(0);
 
 	useEffect(() => {
 		const checkScreenSize = (): void => {
@@ -28,13 +29,19 @@ export default function Navigation() {
 		};
 
 		const handleScroll = (): void => {
-			// Only show the floating navigation on desktop when scrolled past threshold
-			if (!isMobile) {
-				setShowNav(window.scrollY > window.innerHeight - 200);
-			} else {
-				// Always hide floating nav on mobile
+			const currentScrollY = window.scrollY;
+			
+			// Determine if we're scrolling up or down
+			if (currentScrollY > lastScrollY) {
+				// Scrolling down - hide the nav
 				setShowNav(false);
+			} else {
+				// Scrolling up - show the nav
+				setShowNav(true);
 			}
+			
+			// Update the last scroll position
+			setLastScrollY(currentScrollY);
 
 			// Always update the active section on all devices
 			updateActiveSection();
@@ -67,7 +74,7 @@ export default function Navigation() {
 			window.removeEventListener("resize", checkScreenSize);
 			window.removeEventListener("scroll", handleScroll);
 		};
-	}, [isMobile]);
+	}, [lastScrollY]);
 
 	// New approach: force scroll to reset before scrolling to target
 	const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -120,7 +127,7 @@ export default function Navigation() {
 
 	return (
 		<>
-			{/* Floating navigation that only appears on desktop after scrolling */}
+			{/* Navigation that shows/hides based on scroll direction */}
 			<AnimatePresence>
 				{showNav && (
 					<motion.div
@@ -130,17 +137,14 @@ export default function Navigation() {
 						exit={{ y: -100, opacity: 0 }}
 						transition={{ duration: 0.3, ease: "easeInOut" }}
 					>
-						<DesktopNavigation handleNavClick={handleNavClick} activeSection={activeSection} />
+						{isMobile ? (
+							<MobileNavigation handleNavClick={handleNavClick} activeSection={activeSection} />
+						) : (
+							<DesktopNavigation handleNavClick={handleNavClick} activeSection={activeSection} />
+						)}
 					</motion.div>
 				)}
 			</AnimatePresence>
-
-			{/* Always visible mobile navigation */}
-			{isMobile && (
-				<div className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
-					<MobileNavigation handleNavClick={handleNavClick} activeSection={activeSection} />
-				</div>
-			)}
 		</>
 	);
 }
