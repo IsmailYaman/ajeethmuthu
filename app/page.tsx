@@ -23,7 +23,7 @@ export default function Home() {
 						<Experience />
 					</div>
 				</section>
-				<section id="expertise" className="text-stone-950 sm:h-screen lg:h-fit bg-red-200 w-full sm:sticky sm:top-0">
+				<section id="expertise" className="text-stone-950 sm:h-screen h-fit w-full bg-white sm:sticky sm:top-0">
 					<div className="max-w-7xl flex items-center mx-auto">
 						<Skills />
 					</div>

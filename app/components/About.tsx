@@ -14,7 +14,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ data, imageFirst = false, b
 	// Function to split text into paragraphs
 	const renderParagraphs = (text: string) => {
 		return text.split("\n\n").map((paragraph, index) => (
-			<p key={index} className={`text-lg md:text-xl leading-relaxed text-gray-600 ${index > 0 ? "mt-4" : ""}`}>
+			<p key={index} className={`text-lg  leading-relaxed text-gray-600 ${index > 0 ? "mt-4" : ""}`}>
 				{paragraph}
 			</p>
 		));
