@@ -15,9 +15,7 @@ export const SkillsItemSolo: React.FC<SkillsItemProps> = ({ item }) => {
 
 	return (
 		<div className="p-4 border border-transparent bg-sky-200 hover:border hover:border-sky-500 rounded-lg transition-all flex items-center h-full gap-3">
-			{IconComponent && (
-				<IconComponent size={24} className="min-h-8 min-w-8 xs:block sm:hidden lg:block text-sky-700 flex-shrink-0" />
-			)}
+			{IconComponent && <IconComponent size={24} className="min-h-8 min-w-8 text-sky-700 flex-shrink-0" />}
 			<div className="w-full overflow-hidden">
 				<h4 className="text-md sm:text-lg font-bold group-hover:font-light break-words hyphens-auto">
 					{item.title}

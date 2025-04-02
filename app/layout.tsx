@@ -29,6 +29,7 @@ export default function RootLayout({
             <meta name="theme-color" content="#00a6f4" />
 				<meta name="apple-mobile-web-app-title" content="AjeethMuthu" />
 				<meta name="application-name" content="AjeethMuthu" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			</head>
 			<body className="font-poppins bg-white">
 				<Navigation />

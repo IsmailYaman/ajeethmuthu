@@ -27,7 +27,10 @@ const Section = ({
 	amount = 0.3,
 }: SectionProps) => {
 	const sectionRef = useRef(null);
-	const isInView = useInView(sectionRef, { once: true, amount });
+	const isInView = useInView(sectionRef, { 
+        once: true, 
+        amount: window.innerWidth < 640 ? 0.1 : amount 
+      });
 
 	const getInitialStyles = () => {
 		switch (animationType) {
