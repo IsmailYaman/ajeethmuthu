@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,7 +8,6 @@ import { intro } from "../data/data";
 import Section from "./Section";
 
 export default function Personalia() {
-	const professions = intro.profession;
 	return (
 		<Section id="home" amount={0.3}>
 			<section className="relative flex min-h-screen w-full items-center py-24 justify-center">
