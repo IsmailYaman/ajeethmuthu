@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, ReactNode } from "react";
+import React, { useRef, ReactNode, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 
 type AnimationType = "slideLeft" | "slideRight" | "fadeIn" | "scaleUp" | "slideUp" | "rotate" | "none";
@@ -27,10 +27,17 @@ const Section = ({
 	amount = 0.3,
 }: SectionProps) => {
 	const sectionRef = useRef(null);
-	const isInView = useInView(sectionRef, { 
-        once: true, 
-        amount: window.innerWidth < 640 ? 0.1 : amount 
-      });
+	const [viewAmount, setViewAmount] = useState(amount);
+
+	useEffect(() => {
+		// Access window object only after component mounts (client-side)
+		setViewAmount(window.innerWidth < 640 ? 0.1 : amount);
+	}, [amount]);
+
+	const isInView = useInView(sectionRef, {
+		once: true,
+		amount: viewAmount,
+	});
 
 	const getInitialStyles = () => {
 		switch (animationType) {
