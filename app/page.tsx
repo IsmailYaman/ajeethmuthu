@@ -32,9 +32,9 @@ export default function Home() {
 				</div>
 				<div id="expertise" className="text-stone-950 sm:h-screen h-fit w-full bg-white sm:sticky sm:top-0">
 					<div className="max-w-7xl flex items-center mx-auto">
-						<Section animationType="slideLeft" className="w-full">
+						{/* <Section animationType="slideLeft" className="w-full"> */}
 							<Skills />
-						</Section>
+						{/* </Section> */}
 					</div>
 				</div>
 				<div id="over-mij" className="text-stone-950 sm:h-screen h-fit bg-white w-full sm:sticky sm:top-0">
