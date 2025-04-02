@@ -27,7 +27,7 @@ const Footer = () => {
 	};
 
 	return (
-		<Section animationType="scaleUp" delay={0.2}>
+		<>
 			<div className="flex flex-col md:flex-row gap-12 min-h-[50vh] max-w-7xl mx-auto px-4 py-12">
 				{/* Contact Information */}
 				<div className="w-full md:w-1/2">
@@ -249,7 +249,7 @@ const Footer = () => {
 					</div>
 				</Section>
 			</div>
-		</Section>
+		</>
 	);
 };
 

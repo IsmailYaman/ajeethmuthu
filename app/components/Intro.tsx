@@ -6,7 +6,7 @@ import Section from "./Section";
 
 export default function Intro() {
 	return (
-		<Section animationType="fadeIn" className="h-screen">
+		<>
 			<div className="h-1/2 z-0 grid place-content-center">
 				<ScrollBaseAnimation
 					// delay={500}
@@ -27,6 +27,6 @@ export default function Intro() {
 					Muthu • Muthu •
 				</ScrollBaseAnimation>
 			</div>
-		</Section>
+		</>
 	);
 }
