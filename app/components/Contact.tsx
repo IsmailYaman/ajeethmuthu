@@ -240,7 +240,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className="bottom-5 absolute left-0 w-full right-0 justify-center flex">
-				<Section animationType="slideUp" delay={0.3}>
+				<Section animationType="slideUp" delay={0.5}>
 					<div className="flex align-middle">
 						<span className="text-white font-black">Ajeeth Muthu ×&nbsp;</span>
 						<Link href="https://yamotion.com/">
