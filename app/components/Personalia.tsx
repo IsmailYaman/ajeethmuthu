@@ -5,21 +5,10 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { intro } from "../data/data";
-import { motion, AnimatePresence } from "framer-motion";
 import Section from "./Section";
 
 export default function Personalia() {
 	const professions = intro.profession;
-	const [currentIndex, setCurrentIndex] = useState(0);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setCurrentIndex((prevIndex) => (prevIndex + 1) % professions.length);
-		}, 2000);
-
-		return () => clearInterval(interval);
-	}, []);
-
 	return (
 		<Section id="home" amount={0.3}>
 			<section className="relative flex min-h-screen w-full items-center py-24 justify-center">
