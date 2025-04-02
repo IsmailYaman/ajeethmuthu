@@ -14,7 +14,7 @@ export const ExperienceSection: React.FC<ExperienceSectionProps> = ({ title, ite
 	return (
 		<div className="w-full bg-sky-50 rounded-lg p-6 h-fit">
 			<h3 className="text-3xl font-semibold mb-6">{title}</h3>
-			<div className="space-y-6">
+			<div className="grid grid-cols-1 gap-6">
 				{items.map((item, index) => (
 					<Section animationType="slideLeft" amount={0.3} key={index}>
 						<ExperienceItemSolo key={index} item={item} onClick={onItemClick} />
