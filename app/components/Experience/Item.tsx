@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { ExperienceItem as ExperienceItemType } from "@/app/types/data";
-import Image from "next/image";
 
 interface ExperienceItemProps {
 	item: ExperienceItemType;
