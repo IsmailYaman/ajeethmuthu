@@ -15,9 +15,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ title, items }) =>
 			<h3 className="text-3xl font-semibold mb-6">{title}</h3>
 			<div className=" grid grid-cols-1 gap-6 sm:grid-cols-2 ">
 				{items.map((item, index) => (
-					<Section animationType="slideLeft" amount={0.3} key={index}>
-						<SkillsItemSolo key={index} item={item} />
-					</Section>
+					<SkillsItemSolo key={index} item={item} />
 				))}
 			</div>
 		</div>
