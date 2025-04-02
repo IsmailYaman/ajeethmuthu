@@ -16,7 +16,7 @@ const Experience = () => {
 	};
 
 	return (
-		<Section animationType="slideLeft" className="w-full" amount={0.5}>
+		<Section animationType="slideLeft" className="w-full" amount={0.3}>
 			<div className="py-24 mx-4 flex flex-col gap-8">
 				<h2 className="text-5xl sm:text-7xl font-bold">{experience.title}</h2>
 				<div className="flex flex-col sm:flex-row w-full gap-8 ">
