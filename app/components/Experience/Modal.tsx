@@ -24,8 +24,8 @@ export const ExperienceModal: React.FC<ExperienceModalProps> = ({ isOpen, setIsO
 		<FramerModal open={isOpen} setOpen={setIsOpen}>
 			<ModalContent>
 				<div className="flex flex-col space-y-4">
-					<div className="flex flex-col space-y-4">
-						<h2 className="text-5xl font-semibold leading-none tracking-tight">{item.title}</h2>
+					<div className="flex flex-col space-y-4 smmax-w-full max-w-[80%]">
+						<h2 className="text-xl sm:text-5xl font-semibold leading-none tracking-tight">{item.title}</h2>
 						<p className="text-lg text-muted-foreground">{item.name}</p>
 						<p className="text-sm text-muted-foreground">{item.year}</p>
 					</div>

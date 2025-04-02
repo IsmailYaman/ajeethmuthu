@@ -30,7 +30,7 @@ export default function Navigation() {
 
 		const handleScroll = (): void => {
 			const currentScrollY = window.scrollY;
-			
+
 			// Determine if we're scrolling up or down
 			if (currentScrollY > lastScrollY) {
 				// Scrolling down - hide the nav
@@ -39,7 +39,7 @@ export default function Navigation() {
 				// Scrolling up - show the nav
 				setShowNav(true);
 			}
-			
+
 			// Update the last scroll position
 			setLastScrollY(currentScrollY);
 
@@ -131,7 +131,7 @@ export default function Navigation() {
 			<AnimatePresence>
 				{showNav && (
 					<motion.div
-						className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4"
+						className="fixed top-4 left-0 right-0 z-10 flex justify-center px-4"
 						initial={{ y: -100, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						exit={{ y: -100, opacity: 0 }}

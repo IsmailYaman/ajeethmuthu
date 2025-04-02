@@ -45,7 +45,7 @@ export function FramerModal({ children, open: controlledOpen, setOpen: controlle
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
-						className="fixed inset-0 z-20 top-0 left-0 right-0 bottom-0 flex flex-col items-center w-full h-screen justify-center bg-white/10 backdrop-blur-sm  border border-sky-500"
+						className="fixed p-4 inset-0 z-20 top-0 left-0 right-0 bottom-0 flex flex-col items-center w-full h-screen justify-center bg-white/10 backdrop-blur-sm  border border-sky-500"
 						onClick={() => setOpen(false)}
 					>
 						<motion.div
