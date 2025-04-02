@@ -39,6 +39,7 @@ export interface ExperienceItem {
 	name: string;
 	description: string;
 	year: string;
+    image: string;
 }
 
 export interface ExperienceContent {
