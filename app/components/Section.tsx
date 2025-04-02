@@ -90,7 +90,7 @@ const Section = ({
 	};
 
 	return (
-		<motion.div
+		<motion.section
 			ref={sectionRef}
 			id={id}
 			className={`${fullHeight ? "h-screen" : ""} ${className}`}
@@ -99,7 +99,7 @@ const Section = ({
 			variants={variants}
 		>
 			{children}
-		</motion.div>
+		</motion.section>
 	);
 };
 
