@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 	description: "Ajeeth Muthu's portfolio website",
 	creator: "Ismail Kayadelen @YAMOTION",
 	keywords: "Ajeeth Muthu, Portfolio, Developer, Data Scientist, Data Engineer, Data Steward, Business Analyst",
+    
 };
 
 export default function RootLayout({
@@ -25,6 +26,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={poppins.variable}>
 			<head>
+            <meta name="theme-color" content="#00a6f4" />
 				<meta name="apple-mobile-web-app-title" content="AjeethMuthu" />
 				<meta name="application-name" content="AjeethMuthu" />
 			</head>
