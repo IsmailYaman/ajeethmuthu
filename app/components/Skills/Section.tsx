@@ -2,7 +2,6 @@
 import { SkillsItem } from "@/app/types/data";
 import React from "react";
 import { SkillsItemSolo } from "./Item";
-import Section from "../Section";
 
 interface SkillsSectionProps {
 	title: string;
