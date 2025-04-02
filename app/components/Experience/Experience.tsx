@@ -4,7 +4,6 @@ import { experience } from "../../data/data";
 import { ExperienceItem } from "../../types/data";
 import { ExperienceSection } from "./Section";
 import { ExperienceModal } from "./Modal";
-import Section from "../Section";
 
 const Experience = () => {
 	const [modalOpen, setModalOpen] = useState(false);
