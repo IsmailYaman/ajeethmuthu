@@ -2,49 +2,21 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { motion, AnimatePresence } from "framer-motion";
-import { NavLink } from "../types/data";
-import { navigation } from "../data/data";
-import Section from "./Section";
-
-// Props interface
-interface NavItemProps {
-	item: NavLink;
-	onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
-}
+import { navigation } from "../../data/data";
+import Section from "../Section";
+import { NavItem } from "./NavItem";
 
 export default function Navigation() {
 	const [isMobile, setIsMobile] = useState<boolean>(false);
-	const [showNav, setShowNav] = useState<boolean>(true);
 	const [activeSection, setActiveSection] = useState<string>("");
-	const [lastScrollY, setLastScrollY] = useState<number>(0);
 
 	useEffect(() => {
 		const checkScreenSize = (): void => {
 			setIsMobile(window.innerWidth < 640);
-		};
-
-		const handleScroll = (): void => {
-			const currentScrollY = window.scrollY;
-
-			// Determine if we're scrolling up or down
-			if (currentScrollY > lastScrollY) {
-				// Scrolling down - hide the nav
-				setShowNav(false);
-			} else {
-				// Scrolling up - show the nav
-				setShowNav(true);
-			}
-
-			// Update the last scroll position
-			setLastScrollY(currentScrollY);
-
-			// Always update the active section on all devices
-			updateActiveSection();
 		};
 
 		// Function to determine the active section based on scroll position
@@ -65,16 +37,13 @@ export default function Navigation() {
 		};
 
 		checkScreenSize();
-		handleScroll(); // Check initial scroll position
 
 		window.addEventListener("resize", checkScreenSize);
-		window.addEventListener("scroll", handleScroll);
 
 		return () => {
 			window.removeEventListener("resize", checkScreenSize);
-			window.removeEventListener("scroll", handleScroll);
 		};
-	}, [lastScrollY]);
+	}, []);
 
 	// New approach: force scroll to reset before scrolling to target
 	const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -129,21 +98,19 @@ export default function Navigation() {
 		<>
 			{/* Navigation that shows/hides based on scroll direction */}
 			<AnimatePresence>
-				{showNav && (
-					<motion.div
-						className="fixed top-4 left-0 right-0 z-10 flex justify-center px-4"
-						initial={{ y: -100, opacity: 0 }}
-						animate={{ y: 0, opacity: 1 }}
-						exit={{ y: -100, opacity: 0 }}
-						transition={{ duration: 0.3, ease: "easeInOut" }}
-					>
-						{isMobile ? (
-							<MobileNavigation handleNavClick={handleNavClick} activeSection={activeSection} />
-						) : (
-							<DesktopNavigation handleNavClick={handleNavClick} activeSection={activeSection} />
-						)}
-					</motion.div>
-				)}
+				<motion.div
+					className="fixed top-4 left-0 right-0 z-10 flex justify-center px-4"
+					initial={{ y: -100, opacity: 0 }}
+					animate={{ y: 0, opacity: 1 }}
+					exit={{ y: -100, opacity: 0 }}
+					transition={{ duration: 0.3, ease: "easeInOut" }}
+				>
+					{isMobile ? (
+						<MobileNavigation handleNavClick={handleNavClick} activeSection={activeSection} />
+					) : (
+						<DesktopNavigation handleNavClick={handleNavClick} activeSection={activeSection} />
+					)}
+				</motion.div>
 			</AnimatePresence>
 		</>
 	);
@@ -264,20 +231,5 @@ function MobileNavigation({
 				</Sheet>
 			</nav>
 		</Section>
-	);
-}
-
-function NavItem({ item, onClick, isActive = false }: NavItemProps & { isActive?: boolean }) {
-	return (
-		<Link
-			href={item.href}
-			className={cn(
-				"text-sm font-medium transition-colors",
-				isActive ? "text-sky-500" : "text-white hover:text-sky-500"
-			)}
-			onClick={onClick}
-		>
-			{item.name}
-		</Link>
 	);
 }
