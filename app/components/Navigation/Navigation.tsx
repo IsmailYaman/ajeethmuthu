@@ -19,22 +19,6 @@ export default function Navigation() {
 			setIsMobile(window.innerWidth < 640);
 		};
 
-		// Function to determine the active section based on scroll position
-		const updateActiveSection = (): void => {
-			const sections = Array.from(document.querySelectorAll("section[id]"));
-			const scrollPosition = window.scrollY + 100; // Add offset to determine section earlier
-
-			// Find the last section that starts before current scroll position
-			for (let i = sections.length - 1; i >= 0; i--) {
-				const section = sections[i];
-				const sectionTop = (section as HTMLElement).offsetTop;
-
-				if (scrollPosition >= sectionTop) {
-					setActiveSection(section.id);
-					break;
-				}
-			}
-		};
 
 		checkScreenSize();
 
@@ -233,3 +217,5 @@ function MobileNavigation({
 		</Section>
 	);
 }
+
+
