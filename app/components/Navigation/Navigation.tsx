@@ -202,12 +202,6 @@ export default function Navigation() {
           )}
         </motion.div>
       </AnimatePresence>
-      
-      {/* Debug panel (remove in production) */}
-      <div className="fixed bottom-4 right-4 z-50 p-2 text-xs bg-black/70 text-white rounded-md opacity-70 max-w-xs">
-        <div>Current: CP {currentCheckpoint} ({activeSection})</div>
-        <div>Sections: {sectionCheckpoints.current.length}</div>
-      </div>
     </>
   );
 }
