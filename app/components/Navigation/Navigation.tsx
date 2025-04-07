@@ -209,7 +209,6 @@ export default function Navigation() {
 function DesktopNavigation({
   handleNavClick,
   activeSection,
-  currentCheckpoint,
 }: {
   handleNavClick: (e: React.MouseEvent<HTMLAnchorElement>) => void;
   activeSection: string;
@@ -259,7 +258,6 @@ function DesktopNavigation({
 function MobileNavigation({
   handleNavClick,
   activeSection,
-  currentCheckpoint,
 }: {
   handleNavClick: (e: React.MouseEvent<HTMLAnchorElement>) => void;
   activeSection: string;
